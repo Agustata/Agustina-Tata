@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+<div id= "answer">
+
+    <div>
+        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    var answer_logger =function (fn){
+        $("#answer").append(fn())
+      }
+      answer_logger(function(){
+      return "Yo deberia aparecer en un div#answer!"
+    })
+
+    var secret_keeper=function(string1, string2){
+      var secret="shhhhhhhh_little_liars"
+      $("body").append(string1+secret+string2)
+    }
+    secret_keeper("hola","chau")
+
+
+    var programacion_html=function(string1, string2,string3){
+      var programacion="aprendiendo _como_programar"
+      $("body").append("<p>"+string1+string2+programacion+string3+"</p>")
+    }
+    programacion_html("estoy,hace_tiempo","con_html")
+
+
+   var multiplies_by= function(nm1){
+   return function(nm2){return nm1*nm2}
+    }
+    var times5=multiplies_by(5)
+times5(4)
+var times8=multiplies_by(8)
+times8(2)
+    </script>
+    </div>
+  </body>
+</html>
